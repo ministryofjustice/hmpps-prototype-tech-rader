@@ -11,3 +11,7 @@ A node express application configured with the UK [goverment design system](http
 ### Start
 
 `npm start`
+
+## CSS
+
+Add custom styling to `/assets/sass/styles.scss`
