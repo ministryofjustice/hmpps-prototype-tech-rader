@@ -7,7 +7,6 @@ const nunjucks = require('nunjucks');
 const sassMiddleware = require('node-sass-middleware');
 
 const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/users');
 
 const app = express();
 
@@ -50,7 +49,6 @@ app.use('/govuk-frontend', express.static(path.join(__dirname, '../node_modules/
 app.use('/assets', express.static(path.join(__dirname, '../node_modules/govuk-frontend/govuk/assets')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
