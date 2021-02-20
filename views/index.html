@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+	<p class="govuk-body govuk-!-margin-top-6">These are all the things we're doing.</p>
+
+	<div class="govuk-grid-row">
+	{% for status, statusData in statuses %}
+		<section class="column-sixth">
+			<div class="tag {{ status }} govuk-heading-s">{{ statusData.formatted }}</div>
+			<div class="big-number txt-{{ status }}">{{ counts[status] }}</div>
+		</section>
+	{% endfor %}
+	</div>
+
+	{% for theme in themes %}
+		<h2 class="heading-large govuk-heading-m service-area">{{ theme.productTheme }}</h2>
+		<div class="govuk-grid-row">
+			{% for status, statusData in statuses %}
+				<section class="column-sixth">
+					<ul class="link-list border-{{status}}">
+						{% for product in products %}
+							{% if (status == product.productStatus) and (theme.productTheme == product.productTheme.fields.productTheme) %}
+								<li><a href="product/{{ product.key }}" class="govuk-link" >{{ product.productName}}</a></li>
+							{% endif %}
+					{% endfor %}
+					</ul>
+				</section>
+			{% endfor %}
+		</div>
+	{% endfor %}
+
+	<p class="govuk-body-xs govuk-!-margin-top-9">Last updated 30th June 2020.<p>
+
+</main>
+
+{% endblock %}
