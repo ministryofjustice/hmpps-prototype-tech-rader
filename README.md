@@ -1,6 +1,6 @@
-# A GovKit Prototyping template
+# HMPPS Tech Rader Prototpe v2
 
-A node express application configured with the UK [goverment design system](https://design-system.service.gov.uk) for rapid prototyping
+A node express application configured with the UK [goverment design system](https://design-system.service.gov.uk)
 
 ## Getting started
 
