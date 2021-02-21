@@ -54,8 +54,53 @@ $tooling-colour: govuk-colour("light-green");
 
   li {
     padding: govuk-spacing(2);
+  }
+}
 
-   
+.phase_modifier {
+  @include govuk-font(16, 'regular');
+  position: absolute;
+  top: 24px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: govuk-colour('white');
+}
+.phase-circle {
+  width: 40%;
+  position: relative;
+}
+.circle-label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: govuk-colour('white');
+}
+.circle {
+  background: govuk-colour('red');
+  color: govuk-colour('white');
+  width: 100%;
+  height: 0;
+  padding-top: 100%;
+  border-radius: 50% 50%;
+  display: inline-block;
+  margin: 0;
+
+  &.platforms {
+    background-color: $platforms-colour;
+  }
+  &.languages-and-frameworks {
+    background-color: $languages-and-frameworks-colour;
+  }
+  &.techniques {
+    background-color: $techniques-colour;
+  }
+  &.tooling {
+    background-color: $tooling-colour;
   }
 }
 

@@ -22,7 +22,7 @@
 				<ul class="link-list border-{{categories.class}}">
 						{% for blip in radardata %}
 							{% if (categories.title == blip.quadrant) and (quadrant == blip.ring) %}
-								<li><a href="product/{{ blip.name}}" class="govuk-link" >{{blip.name}}</a></li>
+								<li><a href="detail/{{ blip.id}}" class="govuk-link" >{{blip.name}}</a></li>
 							{% endif %}
 					{% endfor %}
 					</ul>
