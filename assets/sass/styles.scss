@@ -1,1 +1,61 @@
 @import "node_modules/govuk-frontend/govuk/all";
+
+
+$platforms-colour: govuk-colour("purple");
+$languages-and-frameworks-colour: govuk-colour("bright-purple");
+$techniques-colour: govuk-colour("orange");
+$tooling-colour: govuk-colour("light-green");
+
+.tag {
+    color: govuk-colour('white');
+    font-weight: 700;
+    padding: govuk-spacing(1);
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &.platforms {
+      background-color: $platforms-colour
+    }
+    &.languages-and-frameworks {
+      background-color: $languages-and-frameworks-colour;
+    }
+    &.techniques {
+      background-color: $techniques-colour;
+    }
+    &.tooling {
+      background-color: $tooling-colour;
+    }
+  }
+/*
+  Lists of links
+*/
+
+.link-list {
+  @include govuk-font(16, 'regular');
+  margin-bottom: govuk-spacing(1);
+  background-color: govuk-colour('light-grey');
+  border-left: 3px solid transparent;
+  list-style: none;
+  padding-left: 0;
+  
+  &.border-platforms {
+    border-color: $platforms-colour;
+  }
+  &.border-languages-and-frameworks {
+    border-color: $languages-and-frameworks-colour;
+  }
+  &.border-techniques {
+    border-color: $techniques-colour;
+  }
+  &.border-tooling {
+    border-color: $tooling-colour;
+  }
+
+  li {
+    padding: govuk-spacing(2);
+
+   
+  }
+}
+

@@ -4,26 +4,23 @@
 
 <main id="content" role="main">
 
-	<p class="govuk-body govuk-!-margin-top-6">These are all the things we're doing.</p>
-
 	<div class="govuk-grid-row">
-	{% for status, statusData in statuses %}
-		<section class="column-sixth">
-			<div class="tag {{ status }} govuk-heading-s">{{ statusData.formatted }}</div>
-			<div class="big-number txt-{{ status }}">{{ counts[status] }}</div>
+	{% for categories in radarcategories %}
+		<section class="govuk-grid-column-one-quarter">
+			<h2 class="tag {{ categories.class }} govuk-heading-s">{{ categories.title }}</h2>
 		</section>
 	{% endfor %}
 	</div>
 
-	{% for theme in themes %}
-		<h2 class="heading-large govuk-heading-m service-area">{{ theme.productTheme }}</h2>
+	{% for quadrant in radarquadrants %}
+		<h2 class="heading-large govuk-heading-m service-area">{{ quadrant }}</h2>
 		<div class="govuk-grid-row">
-			{% for status, statusData in statuses %}
-				<section class="column-sixth">
-					<ul class="link-list border-{{status}}">
-						{% for product in products %}
-							{% if (status == product.productStatus) and (theme.productTheme == product.productTheme.fields.productTheme) %}
-								<li><a href="product/{{ product.key }}" class="govuk-link" >{{ product.productName}}</a></li>
+			{% for categories in radarcategories %}
+			<section class="govuk-grid-column-one-quarter">
+				<ul class="link-list border-{{categories.class}}">
+						{% for blip in radardata %}
+							{% if (categories.title == blip.quadrant) and (quadrant == blip.ring) %}
+								<li><a href="product/{{ blip.name}}" class="govuk-link" >{{blip.name}}</a></li>
 							{% endif %}
 					{% endfor %}
 					</ul>
