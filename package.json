@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "start:dev": "nodemon server.js --config ./package.json"
+    "start:dev": "nodemon server.js --config ./package.json",
+    "test": "jest"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -12,6 +13,7 @@
     "express": "~4.16.1",
     "govuk-frontend": "^3.11.0",
     "http-errors": "~1.6.3",
+    "jest": "^26.6.3",
     "morgan": "~1.9.1",
     "node-sass-middleware": "^0.11.0",
     "nunjucks": "^3.2.3",
