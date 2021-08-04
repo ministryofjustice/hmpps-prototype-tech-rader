@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: HMPPS Tech radar protoype
+  name: HMPPS_Tech_radar_protoype
   description: |
     A proof of concept design for the HMPPS tech rader.
   links:
@@ -12,5 +12,5 @@ metadata:
 
 spec:
   type: Website
-  owner: Ateven Wilson
+  owner: Steven Wilson
   lifecycle: alpha
