@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node ./bin/www",
     "start:dev": "nodemon server.js --config ./package.json",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --notify --watch"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",

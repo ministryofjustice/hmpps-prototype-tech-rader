@@ -8,6 +8,7 @@ const sassMiddleware = require('node-sass-middleware');
 
 const indexRouter = require('./routes/index');
 const detailRouter = require('./routes/detail');
+const apiRouter = require('./routes/api');
 
 const app = express();
 
@@ -51,6 +52,7 @@ app.use('/assets', express.static(path.join(__dirname, '../node_modules/govuk-fr
 
 app.use('/', indexRouter);
 app.use('/', detailRouter);
+app.use('/', apiRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
