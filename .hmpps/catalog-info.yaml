@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
-kind: Component
+kind: Website
 metadata:
-  name: HMPPS_Tech_radar_protoype
+  name: HMPPS-TechRadar-protoype
   description: |
     A proof of concept design for the HMPPS tech rader.
   links:
