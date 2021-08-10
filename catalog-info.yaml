@@ -19,3 +19,4 @@ spec:
   lifecycle: production
   owner: artist-relations-team
   system: public-websites
+  subcomponentOf: hmpps-backstage
