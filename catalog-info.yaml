@@ -1,5 +1,5 @@
 apiVersion: backstage.io/v1alpha1
-kind: System
+kind: API
 metadata:
   name: prison-api
   description: Access to all NOMIS data via this API.
