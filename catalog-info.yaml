@@ -22,6 +22,6 @@ spec:
   lifecycle: live
   owner: dps-tech-team
   domain: enabling-services
-  definition:
-    $text: https://api.prison.service.justice.gov.uk/api/swagger.json
+  # definition:
+  #   $text: https://api.prison.service.justice.gov.uk/api/swagger.json
   # subcomponentOf: hmpps-backstage
