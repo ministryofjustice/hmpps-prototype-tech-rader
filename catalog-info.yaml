@@ -1,22 +1,27 @@
 apiVersion: backstage.io/v1alpha1
-kind: Component
+kind: System
 metadata:
-  name: hmpps-test-component
-  description: A sample component for HMPPS
+  name: prison-api
+  description: Access to all NOMIS data via this API.
   labels:
     example.com/custom: custom_label_value
   annotations:
-    example.com/service-discovery: artistweb
-    circleci.com/project-slug: github/example-org/artist-website
+    circleci.com/project-slug: github/ministryofjustice/prison-api
   tags:
-    - java
+    - Java
+    - Spring Boot
   links:
-    - url: https://admin.example-org.com
-      title: Admin Dashboard
+    - url: https://api.prison.service.justice.gov.uk/health
+      title: Health Check
+      icon: dashboard
+    - url: https://github.com/ministryofjustice/nomis-api-terraform-azure/
+      title: Infrastrcutre code
       icon: dashboard
 spec:
   type: website
-  lifecycle: production
-  owner: artist-relations-team
-  system: public-websites
-  subcomponentOf: hmpps-backstage
+  lifecycle: live
+  owner: dps-tech-team
+  domain: enabling-services
+  definition:
+    $text: https://api.prison.service.justice.gov.uk/api/swagger.json
+  # subcomponentOf: hmpps-backstage
