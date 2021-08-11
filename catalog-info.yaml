@@ -8,8 +8,8 @@ metadata:
   annotations:
     circleci.com/project-slug: github/ministryofjustice/prison-api
   tags:
-    - java
-    - spring-boot
+    - Java
+    - Spring Boot
   links:
     - url: https://api.prison.service.justice.gov.uk/health
       title: Health Check
