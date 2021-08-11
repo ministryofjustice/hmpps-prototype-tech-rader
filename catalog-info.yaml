@@ -18,9 +18,8 @@ metadata:
       title: Infrastrcutre code
       icon: dashboard
 spec:
-  type: website
+  type: openapi
   lifecycle: live
   owner: dps-tech-team
-  domain: enabling-services
   definition: |
-  // some content 
+  // some content
