@@ -22,4 +22,4 @@ spec:
   lifecycle: live
   owner: dps-tech-team
   definition:
-     $text: https://api.prison.service.justice.gov.uk/api/swagger.json
+     $json: https://api.prison.service.justice.gov.uk/api/swagger.json
