@@ -1,25 +1,22 @@
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: prison-api
-  description: Access to all NOMIS data via this API.
-  labels:
-    example.com/custom: custom_label_value
-  annotations:
-    circleci.com/project-slug: github/ministryofjustice/prison-api
+  name: hmpps-auth
+  description: The HMPPS Authentication (HMPPS Auth) product for accessing HMPPS digital services which includes Digital Prison Services (DPS) and probation services.
   tags:
-    - java
+    - kotlin
     - spring-boot
   links:
-    - url: https://api.prison.service.justice.gov.uk/health
-      title: Health Check
-      icon: dashboard
+    - url: https://sign-in.hmpps.service.justice.gov.uk/auth/swagger-ui.html
+      title: API Docs
+      icon: Description
+    - url: https://sign-in.hmpps.service.justice.gov.uk/auth/health
+      title: Health endpoint
+      icon: LocalHospital
     - url: https://github.com/ministryofjustice/nomis-api-terraform-azure/
-      title: Infrastrcutre code
-      icon: dashboard
+      title: Infra code
+      icon: Build
 spec:
-  type: openapi
+  type: service
   lifecycle: live
   owner: dps-tech-team
-  definition:
-     $text: https://api.prison.service.justice.gov.uk/api/swagger.json
