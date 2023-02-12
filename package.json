@@ -35,6 +35,6 @@
   },
   "ext": "js,json,html,css,scss,sass",
   "devDependencies": {
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.20"
   }
 }
